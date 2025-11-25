@@ -43,7 +43,7 @@ jobs:
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           coverity_prComment_enabled: true
-          coverity_prComment_impacts: 'High,Medium,Low,Audit'
+          coverity_prComment_severities: 'High,Low'
 
           ### POLICY ENFORCEMENT: to break the build
           coverity_policy_view: "Outstanding Issues"

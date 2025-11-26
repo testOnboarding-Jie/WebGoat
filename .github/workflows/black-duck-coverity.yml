@@ -7,7 +7,7 @@
 # For more information about configuring your workflow,
 # read our documentation at https://github.com/blackduck-inc/black-duck-security-scan
 
-name: CI Black Duck security scan
+name: Coverity Scan
 
 on:
   push:
@@ -37,9 +37,9 @@ jobs:
           coverity_url: ${{ vars.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}
           coverity_passphrase: ${{ secrets.COVERITY_PASSPHRASE }}
-          #coverity_project_name:xx
-          #coverity_stream_name:xx
-          #coverity_version: 'xx'
+          coverity_project_name: 'WebGoat-Jie'
+          coverity_stream_name: 'WebGoat-Jie'
+          #coverity_version: '2025.6'
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           coverity_prComment_enabled: true

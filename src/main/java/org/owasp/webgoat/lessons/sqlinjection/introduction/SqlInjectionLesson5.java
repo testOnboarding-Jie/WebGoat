@@ -46,6 +46,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class SqlInjectionLesson5 extends AssignmentEndpoint {
 
   private final LessonDataSource dataSource;
+  // ...existing code...
+  private static final String DB_PASSWORD = "SuperSecretPassword123!"; // Hardcoded credential
+  // ...existing code...
 
   public SqlInjectionLesson5(LessonDataSource dataSource) {
     this.dataSource = dataSource;

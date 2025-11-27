@@ -57,23 +57,23 @@ public class SqlInjectionLesson5 extends AssignmentEndpoint {
 
   // ...existing code...
 
-  @PostMapping("/SqlInjection/vulnerable")
-  @ResponseBody
-  public AttackResult vulnerableSql(String username) {
-    try (Connection connection = dataSource.getConnection()) {
-      Statement statement = connection.createStatement();
-      // Vulnerable to SQL Injection!
-      String query = "SELECT * FROM users WHERE username = '" + username + "'";
-      ResultSet rs = statement.executeQuery(query);
-      if (rs.next()) {
-        return success(this).output("User found: " + username).build();
-      } else {
-        return failed(this).output("User not found: " + username).build();
-      }
-    } catch (Exception e) {
-      return failed(this).output("Error: " + e.getMessage()).build();
-    }
-  }
+  // @PostMapping("/SqlInjection/vulnerable")
+  // @ResponseBody
+  // public AttackResult vulnerableSql(String username) {
+  //   try (Connection connection = dataSource.getConnection()) {
+  //     Statement statement = connection.createStatement();
+  //     // Vulnerable to SQL Injection!
+  //     String query = "SELECT * FROM users WHERE username = '" + username + "'";
+  //     ResultSet rs = statement.executeQuery(query);
+  //     if (rs.next()) {
+  //       return success(this).output("User found: " + username).build();
+  //     } else {
+  //       return failed(this).output("User not found: " + username).build();
+  //     }
+  //   } catch (Exception e) {
+  //     return failed(this).output("Error: " + e.getMessage()).build();
+  //   }
+  // }
 
   // ...existing code...
 

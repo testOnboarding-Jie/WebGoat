@@ -31,7 +31,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
       - name: Black Duck Coverity scan
-        uses: blackduck-inc/black-duck-security-scan@v2
+        uses: blackduck-inc/black-duck-security-scan@v3
         with:
           ### ---------- COVERITY SCANNING: REQUIRED FIELDS ----------
           coverity_url: ${{ vars.COVERITY_URL }}

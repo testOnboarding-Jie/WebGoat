@@ -31,7 +31,7 @@ jobs:
       - name: Checkout source
         uses: actions/checkout@v4
       - name: Black Duck Coverity scan
-        uses: blackduck-inc/black-duck-security-scan@v3
+        uses: blackduck-inc/black-duck-security-scan@v2
         with:
           ### ---------- COVERITY SCANNING: REQUIRED FIELDS ----------
           coverity_url: ${{ vars.COVERITY_URL }}
@@ -43,7 +43,7 @@ jobs:
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           coverity_prComment_enabled: true
-          coverity_prComment_impacts: 'High,Medium,Low'
+          coverity_prComment_impact: 'High,Medium,Low'
 
           ### POLICY ENFORCEMENT: to break the build
           coverity_policy_view: "Outstanding Issues"

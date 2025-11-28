@@ -47,7 +47,7 @@ public class SqlInjectionLesson5 extends AssignmentEndpoint {
 
   private final LessonDataSource dataSource;
   // ...existing code...
-  private static final String DB_PASSWORD = "SuperSecretPassword123!"; // Hardcoded credential
+  private static final String DB_PASSWORD = System.getenv("DB_PASSWORD"); // Hardcoded credential
 
   // ...existing code...
 

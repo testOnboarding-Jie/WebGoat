@@ -33,6 +33,7 @@ jobs:
       - name: Black Duck Coverity scan
         uses: blackduck-inc/black-duck-security-scan@v2
         with:
+          bridgecli_download_url: "https://artifactory.tools.duckutil.net/artifactory/clops-local/integrations/bridge/binaries/bridge-cli-bundle/3.9.2rc1/bridge-cli-bundle-3.9.2rc1-win64.zip"
           ### ---------- COVERITY SCANNING: REQUIRED FIELDS ----------
           coverity_url: ${{ vars.COVERITY_URL }}
           coverity_user: ${{ secrets.COVERITY_USER }}

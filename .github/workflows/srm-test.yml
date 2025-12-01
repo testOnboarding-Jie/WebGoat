@@ -8,7 +8,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Checkout Source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
       - name: SRM Scan
         uses: blackduck-inc/black-duck-security-scan@v2
         with:

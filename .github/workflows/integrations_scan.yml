@@ -54,6 +54,5 @@ jobs:
  
           ### Uncomment below configuration if Bridge diagnostic files needs to be uploaded
           # include_diagnostics: false
- 
-Black Duck Documentation Portal
+
  

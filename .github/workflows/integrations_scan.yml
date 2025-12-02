@@ -32,15 +32,15 @@ jobs:
           ### SCANNING: Required fields
           blackducksca_url: ${{ vars.BLACKDUCKSCA_URL }}
           blackducksca_token: ${{ secrets.BLACKDUCKSCA_TOKEN }}
-          blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'
+          #blackducksca_scan_failure_severities: 'BLOCKER,CRITICAL'
           ### GITHUB TOKEN
           github_token: ${{ secrets.GITHUB_TOKEN }}  # Required when PR comments or sarif reports enabled
           blackducksca_prComment_enabled: true
           ### FIX PULL REQUEST CREATION
-          blackducksca_fixpr_enabled: true
-          blackducksca_fixpr_maxCount: 3
-          blackducksca_fixpr_filter_severities: 'Critical, High'
-          blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM, LONG_TERM'
+          #blackducksca_fixpr_enabled: true
+          #blackducksca_fixpr_maxCount: 3
+          #blackducksca_fixpr_filter_severities: 'Critical, High'
+          #blackducksca_fixpr_useUpgradeGuidance: 'SHORT_TERM, LONG_TERM'
           ### SARIF report parameters
           blackducksca_reports_sarif_create: true  # Create SARIF report and upload it as artifact
           #blackducksca_upload_sarif_report: true  # Upload SARIF report in GitHub Advanced Security tab

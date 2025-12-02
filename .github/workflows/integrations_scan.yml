@@ -1,5 +1,4 @@
-This is mine # Quickstart: Black Duck Security Scan Action with blackducksca:
-#     https://documentation.blackduck.com/bundle/bridge/page/documentation/t_github-blackduck-quickstart.html
+
 name: Integrations Scan 
 on:
   push:

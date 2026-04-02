@@ -38,7 +38,7 @@ jobs:
           # polaris_fixpr_filter_severities: "BLOCKER"
 
           # GitHub Configuration
-          github_token: ${{ secrets.TOKEN1 }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           # github_host_url: "https://github.com"
           # github_repository_owner: "jraob-testing"
           # github_repository_name: "nodegoat-polaris-test"
